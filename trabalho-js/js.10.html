@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do Aluno</title>
+</head>
+<body>
+     
+    <h3>Média do Aluno</h3>
+    
+
+    <label for="Nome do Aluno">Nome do Aluno</label> <br>
+    <input type="text" id="nome_aluno"> <br>
+    <label for=""> AV1</label> <br>
+    <input type="text" id="input_nota1"> <br>
+    <label for=""> AV2</label> <br>
+    <input type="text" id="input_nota2"> <br>
+
+    <button onclick="calcular()">Calcular</button> <br>
+
+    <p id="media"> Media</p>
+    <p id="aluno">Nome do Aluno</p>
+    
+
+    <script>
+        function calcular(){
+            var nota1 = document.getElementById("input_nota1").value;
+            var nota2 = document.getElementById("input_nota2").value;
+        
+
+        //convertendo
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+
+        //Calculo matemático
+        var media =  (nota1 + (nota2*2)) /3;
+
+        document.getElementById("media").innerHTML = "Media do aluno: " + media;
+        document.getElementById("aluno").innerHTML = "Nome do aluno: " + aluno;
+       
+        console.log(media);
+        console.log(aluno);
+        }
+       
+    </script>
+</body>
+</html>

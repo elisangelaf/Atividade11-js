@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor da compra</title>
+</head>
+<body>
+    
+
+    <label for="">Valor da compra</label> <br>
+    <input type="text" id="Valor_compras"> <br>
+    <label for=""> Parcelas</label> <br>
+    <select name="Parcelas" id="Numeros_parcelas">
+        <option value=1>1 parcelas</option>
+        <option value=2>2 parcelas</option>
+        <option value=3>3 parcelas</option>
+        <option value=4>4 parcelas</option>
+        <option value=5>5 parcelas</option>
+        <option value=6>6 parcelas</option>
+        <option value=7>7 parcelas</option>
+        <option value=8>8 parcelas</option>
+        <option value=9>9 parcelas</option>
+        <option value=10>10 parcelas</option>
+    </select><br>
+
+    <button onclick="calcular()">Calcular</button> <br>
+
+    <p id="valorComJuros"></p>
+    <p>Valor dos juros:</p>
+    <p>Valor das parcelas:</p>
+
+    <script>
+        function calcular(){
+            var parcelas_selecionado = document.getElementById("Numeros_parcelas").value;
+            let valorCompras = document.getElementById("Valor_compras").value;
+
+            console.log(parcelas_selecionado)
+
+            if(parcelas_selecionado == 1){
+                document.getElementById("valorComJuros").innerHTMl = `O valor sem juros é ${valorCompras}`;
+            }else{
+                alert("valor da parcela");
+            }
+        
+
+      
+        
+
+         
+        }
+
+    </script>
+
+</body>
+</html>
